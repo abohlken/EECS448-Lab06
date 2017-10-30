@@ -1,6 +1,6 @@
 /**
-*	@author 
-*	@date 
+*	@author Alex Bohlken
+*	@date 10/30/17
 *	@file main.cpp
 *	@brief driver for LinkedList demo
 */
@@ -10,11 +10,11 @@
 int main(int argc, char** argv)
 {
 	TestSuite myTester;
-	myTester.runTests();
 
-	std::cout << "Running...\nAnd we're done.\nGoodbye.\n";
-	
+	std::cout << "Running tests!\n";
+	myTester.runTests();
+	std::cout<<"Tests complete!\n";
+
 	return (0);
 
 }
-
