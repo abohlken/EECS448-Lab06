@@ -11,6 +11,9 @@ void TestSuite::runTests()
     testSize1();
     testSize2();
     testSize3();
+    testSize4();
+    testSize5();
+    testEmpty();
 }
 
 void TestSuite::testSize1()
@@ -43,4 +46,46 @@ void TestSuite::testSize3()
       std::cout << "Passed!\n";
     else
       std::cout << "Failed!\n";
+}
+
+void TestSuite::testSize4()
+{
+    std::cout << "Test 4: Size of list is correct after multiple addFronts: ";
+    LinkedListOfInts list;
+    for(int i=0;i<1000;i++)
+      list.addFront(1);
+    if(list.size() == 1000)
+      std::cout << "Passed!\n";
+    else
+      std::cout << "Failed!\n";
+}
+
+void TestSuite::testSize5()
+{
+    std::cout << "Test 5: Size of list is correct after multiple addBacks: ";
+    LinkedListOfInts list;
+    for(int i=0;i<1000;i++)
+      list.addBack(1);
+    if(list.size() == 1000)
+      std::cout << "Passed!\n";
+    else
+      std::cout << "Failed!\n";
+}
+
+void TestSuite::testEmpty()
+{
+    std::cout << "Test 6: isEmpty returns true on empty list: ";
+    LinkedListOfInts list;
+    if(list.isEmpty())
+      std::cout << "Passed!\n";
+    else
+      std::cout << "Failed!\n";
+
+    std::cout << "Test 7: isEmpty returns false on list with size greater than 0: ";
+    for(int i=0;i<10;i++)
+      list.addBack(1);
+    if(list.isEmpty())
+      std::cout << "Failed!\n";
+    else
+      std::cout << "Passed!\n";
 }

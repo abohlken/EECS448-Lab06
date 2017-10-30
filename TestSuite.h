@@ -17,7 +17,7 @@ class TestSuite
              *  @post all tests are run
              */
             void runTests();
-						
+
             /** @pre none
              *  @post tests that size of empty list returns 0
              */
@@ -32,5 +32,20 @@ class TestSuite
              *  @post tests that size of list is 1 after 1 addBack
              */
             void testSize3();
+
+            /** @pre none
+             *  @post tests that size of list is correct after multiple addFronts
+             */
+            void testSize4();
+
+            /** @pre none
+             *  @post tests that size of list is correct after multiple addBacks
+             */
+            void testSize5();
+
+            /** @pre none
+             *  @post tests the isEmpty function for both where the list is empty and where it's not empty
+             */
+            void testEmpty();
 };
 #endif
