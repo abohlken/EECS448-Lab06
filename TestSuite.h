@@ -62,5 +62,15 @@ class TestSuite
              *  @post tests the search function where list is not empty and value is in list
              */
             void testSearch3();
+
+            /** @pre none
+             *  @post tests that the removeFront function returns false on empty list
+             */
+            void testRemove1();
+
+            /** @pre none
+             *  @post tests that the removeBack function returns false on empty list
+             */
+            void testRemove2();
 };
 #endif
