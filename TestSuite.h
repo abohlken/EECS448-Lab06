@@ -72,5 +72,15 @@ class TestSuite
              *  @post tests that the removeBack function returns false on empty list
              */
             void testRemove2();
+
+            /** @pre none
+             *  @post tests that the removeFront function returns true on nonempty list
+             */
+            void testRemove3();
+
+            /** @pre none
+             *  @post tests that the removeBack function returns true on nonempty list
+             */
+            void testRemove4();
 };
 #endif

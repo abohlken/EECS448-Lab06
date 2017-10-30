@@ -19,6 +19,8 @@ void TestSuite::runTests()
     testSearch3();
     testRemove1();
     testRemove2();
+    testRemove3();
+    testRemove4();
 }
 
 void TestSuite::testSize1()
@@ -143,6 +145,30 @@ void TestSuite::testRemove2()
 {
   std::cout << "Test 11: removeBack returns false on empty list: ";
   LinkedListOfInts list;
+  if(list.removeBack())
+    std::cout << "Failed!\n";
+  else
+    std::cout << "Passed\n";
+}
+
+void TestSuite::testRemove3()
+{
+  std::cout << "Test 12: removeFront returns true on nonempty list: ";
+  LinkedListOfInts list;
+  for(int i=0;i<10;i++)
+    list.addFront(i);
+  if(list.removeFront())
+    std::cout << "Passed!\n";
+  else
+    std::cout << "Failed!\n";
+}
+
+void TestSuite::testRemove4()
+{
+  std::cout << "Test 13: removeBack returns true on nonempty list: ";
+  LinkedListOfInts list;
+  for(int i=0;i<10;i++)
+    list.addFront(i);
   if(list.removeBack())
     std::cout << "Failed!\n";
   else
