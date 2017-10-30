@@ -14,6 +14,9 @@ void TestSuite::runTests()
     testSize4();
     testSize5();
     testEmpty();
+    testSearch1();
+    testSearch2();
+    testSearch3();
 }
 
 void TestSuite::testSize1()
@@ -88,4 +91,38 @@ void TestSuite::testEmpty()
       std::cout << "Failed!\n";
     else
       std::cout << "Passed!\n";
+}
+
+void TestSuite::testSearch1()
+{
+    std::cout <<"Test 8: search returns false on empty list: ";
+    LinkedListOfInts list;
+    if(list.search(1))
+      std::cout << "Failed!\n";
+    else
+      std::cout << "Passed!\n";
+}
+
+void TestSuite::testSearch2()
+{
+    std::cout <<"Test 9: search returns false on populated list where value is not in list: ";
+    LinkedListOfInts list;
+    for(int i=0;i<100;i++)
+      list.addBack(i);
+    if(list.search(101))
+      std::cout << "Failed!\n";
+    else
+      std::cout << "Passed!\n";
+}
+
+void TestSuite::testSearch3()
+{
+    std::cout <<"Test 9: search returns true on populated list where value is in list: ";
+    LinkedListOfInts list;
+    for(int i=0;i<100;i++)
+      list.addBack(i);
+    if(list.search(50))
+      std::cout << "Passed!\n";
+    else
+      std::cout << "Failed!\n";
 }

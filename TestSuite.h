@@ -47,5 +47,20 @@ class TestSuite
              *  @post tests the isEmpty function for both where the list is empty and where it's not empty
              */
             void testEmpty();
+
+            /** @pre none
+             *  @post tests the search function where list is empty
+             */
+            void testSearch1();
+
+            /** @pre none
+             *  @post tests the search function where list is not empty but value not in list
+             */
+            void testSearch2();
+
+            /** @pre none
+             *  @post tests the search function where list is not empty and value is in list
+             */
+            void testSearch3();
 };
 #endif
