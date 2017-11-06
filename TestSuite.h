@@ -82,5 +82,25 @@ class TestSuite
              *  @post tests that the removeBack function returns true on nonempty list
              */
             void testRemove4();
+
+            /** @pre none
+             *  @post tests that the removeFront function changes the size correctly
+             */
+            void testRemove5();
+
+            /** @pre none
+             *  @post tests that the removeBack function changes the size correctly
+             */
+            void testRemove6();
+
+            /** @pre none
+             *  @post tests that the removeBack function changes the size correctly
+             */
+            void testAdd1();
+
+            /** @pre none
+             *  @post tests that the removeBack function changes the size correctly
+             */
+            void testAdd2();
 };
 #endif

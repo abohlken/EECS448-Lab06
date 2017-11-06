@@ -21,6 +21,10 @@ void TestSuite::runTests()
     testRemove2();
     testRemove3();
     testRemove4();
+    testRemove5();
+    testRemove6();
+    testAdd1();
+    testAdd2();
 }
 
 void TestSuite::testSize1()
@@ -170,7 +174,61 @@ void TestSuite::testRemove4()
   for(int i=0;i<10;i++)
     list.addFront(i);
   if(list.removeBack())
-    std::cout << "Failed!\n";
+    std::cout << "Passed!\n";
   else
-    std::cout << "Passed\n";
+    std::cout << "Failed!\n";
+}
+
+void TestSuite::testRemove5()
+{
+  std::cout << "Test 14: size is still good after removing elements with removeFront: ";
+  LinkedListOfInts list;
+  for(int i=0;i<10;i++)
+    list.addFront(i);
+  int temp = list.size();
+  list.removeFront();
+  if(list.size() == temp-1)
+    std::cout << "Passed!\n";
+  else
+    std::cout << "Failed!\n";
+}
+
+void TestSuite::testRemove6()
+{
+  std::cout << "Test 15: size is still good after removing elements with removeBack: ";
+  LinkedListOfInts list;
+  for(int i=0;i<10;i++)
+    list.addFront(i);
+  int temp = list.size();
+  list.removeBack();
+  if(list.size() == temp-1)
+    std::cout << "Passed!\n";
+  else
+    std::cout << "Failed!\n";
+}
+
+void TestSuite::testAdd1()
+{
+    std::cout << "Test 16: addFront creates nodes with the correct values: ";
+    LinkedListOfInts list;
+    for(int i=0;i<10;i++)
+        list.addFront(1);
+    std::vector<int> temp = list.toVector();
+    if(temp[5] == 1)
+      std::cout << "Passed!\n";
+    else
+      std::cout << "Failed!\n";
+}
+
+void TestSuite::testAdd2()
+{
+    std::cout << "Test 17: addBack creates nodes with the correct values: ";
+    LinkedListOfInts list;
+    for(int i=0;i<10;i++)
+        list.addBack(1);
+    std::vector<int> temp = list.toVector();
+    if(temp[5] == 1)
+      std::cout << "Passed!\n";
+    else
+      std::cout << "Failed!\n";
 }
