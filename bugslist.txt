@@ -1,0 +1,3 @@
+After testing, I've determined that the bugs in the LinkedListOfInts class are:
+1. The isEmpty function always returns true
+2. This causes the removeFront and removeBack functions to not work and always return false before any actual removal happens, since they probably check that the list has elements before trying to remove elements.
